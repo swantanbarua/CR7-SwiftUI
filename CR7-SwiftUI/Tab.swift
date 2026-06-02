@@ -22,9 +22,9 @@ enum Tab: String, CaseIterable {
         case .home: return "house"
         case .goals: return "trophy"
         case .opp: return "hand.draw.fill"
+        case .keep: return "hand.draw"
         case .stats: return "barchart"
-        default: return "house"
-            
+
         }
     }
 }
