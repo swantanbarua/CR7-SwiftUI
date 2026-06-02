@@ -14,7 +14,23 @@ struct ContentView: View {
     
     // MARK: - BODY
     var body: some View {
-        HomeView()
+        switch selectedTab {
+            
+        case .home:
+            HomeView()
+            
+        case .goals:
+            GoalsView()
+            
+        case .opp:
+            OppView()
+            
+        case .keep:
+            KeepersView()
+            
+        case .stats:
+            StatsView()
+        }
     }
 }
 
