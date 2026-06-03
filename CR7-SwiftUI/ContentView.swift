@@ -15,7 +15,7 @@ struct ContentView: View {
     // MARK: - BODY
     var body: some View {
         
-        ZStack {
+        ZStack(alignment: .bottom) {
           switch selectedTab {
               
           case .home:
