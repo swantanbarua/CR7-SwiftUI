@@ -18,10 +18,15 @@ struct GlassTabBar: View {
             .overlay {
                 Capsule()
                     .stroke(
-                        .white.opacity(0.3),
+                        .white.opacity(0.2),
                         lineWidth: 1
                     )
             }
+            .shadow(
+                color: .black.opacity(0.2),
+                radius: 4,
+                y: 2
+            )
             .frame(height: 70)
             .padding(20)
     }
