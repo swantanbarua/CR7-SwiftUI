@@ -14,22 +14,25 @@ struct ContentView: View {
     
     // MARK: - BODY
     var body: some View {
-        switch selectedTab {
-            
-        case .home:
-            HomeView()
-            
-        case .goals:
-            GoalsView()
-            
-        case .opp:
-            OppView()
-            
-        case .keep:
-            KeepersView()
-            
-        case .stats:
-            StatsView()
+        
+        ZStack {
+          switch selectedTab {
+              
+          case .home:
+              HomeView()
+              
+          case .goals:
+              GoalsView()
+              
+          case .opp:
+              OppView()
+              
+          case .keep:
+              KeepersView()
+              
+          case .stats:
+              StatsView()
+          }
         }
     }
 }
