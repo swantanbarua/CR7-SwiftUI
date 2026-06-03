@@ -16,20 +16,26 @@ struct GlassTabBar: View {
         HStack {
             Image(systemName: "house")
                 .font(.system(size: 20))
+            Spacer()
             
             Image(systemName: "trophy")
                 .font(.system(size: 20))
+            Spacer()
             
             Image(systemName: "hand.draw.fill")
                 .font(.system(size: 20))
+            Spacer()
             
             Image(systemName: "hand.draw")
                 .font(.system(size: 20))
+            Spacer()
             
-            Image(systemName: "barchart")
+            Image(systemName: "checkmark")
                 .font(.system(size: 20))
+            Spacer()
                   
         }
+        .padding(20)
         .background(.ultraThinMaterial)
         .clipShape(Capsule())
         .overlay {

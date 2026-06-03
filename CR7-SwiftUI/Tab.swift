@@ -23,7 +23,7 @@ enum Tab: String, CaseIterable {
         case .goals: return "trophy"
         case .opp: return "hand.draw.fill"
         case .keep: return "hand.draw"
-        case .stats: return "barchart"
+        case .stats: return "checkmark"
 
         }
     }
