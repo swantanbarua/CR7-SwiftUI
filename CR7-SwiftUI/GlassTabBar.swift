@@ -13,22 +13,39 @@ struct GlassTabBar: View {
     
     // MARK: - BODY
     var body: some View {
-        Capsule()
-            .fill(.ultraThinMaterial)
-            .overlay {
-                Capsule()
-                    .stroke(
-                        .white.opacity(0.2),
-                        lineWidth: 1
-                    )
-            }
-            .shadow(
-                color: .black.opacity(0.2),
-                radius: 4,
-                y: 2
-            )
-            .frame(height: 70)
-            .padding(20)
+        HStack {
+            Image(systemName: "house")
+                .font(.system(size: 20))
+            
+            Image(systemName: "trophy")
+                .font(.system(size: 20))
+            
+            Image(systemName: "hand.draw.fill")
+                .font(.system(size: 20))
+            
+            Image(systemName: "hand.draw")
+                .font(.system(size: 20))
+            
+            Image(systemName: "barchart")
+                .font(.system(size: 20))
+                  
+        }
+        .background(.ultraThinMaterial)
+        .clipShape(Capsule())
+        .overlay {
+            Capsule()
+                .stroke(
+                    .white.opacity(0.2),
+                    lineWidth: 1
+                )
+        }
+        .shadow(
+            color: .black.opacity(0.1),
+            radius: 4,
+            y: 2
+        )
+        .frame(height: 70)
+        .padding(20)
     }
 }
 
