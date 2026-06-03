@@ -18,19 +18,19 @@ struct GlassTabBar: View {
                 .font(.system(size: 20))
             Spacer()
             
-            Image(systemName: "trophy")
+            Image(systemName: "list.bullet")
                 .font(.system(size: 20))
             Spacer()
             
-            Image(systemName: "hand.draw.fill")
+            Image(systemName: "hexagon")
                 .font(.system(size: 20))
             Spacer()
             
-            Image(systemName: "hand.draw")
+            Image(systemName: "hand.raised")
                 .font(.system(size: 20))
             Spacer()
             
-            Image(systemName: "checkmark")
+            Image(systemName: "square.grid.3x3")
                 .font(.system(size: 20))
             Spacer()
                   

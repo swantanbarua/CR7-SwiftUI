@@ -20,10 +20,10 @@ enum Tab: String, CaseIterable {
         switch self {
             
         case .home: return "house"
-        case .goals: return "trophy"
-        case .opp: return "hand.draw.fill"
-        case .keep: return "hand.draw"
-        case .stats: return "checkmark"
+        case .goals: return "list.bullet"
+        case .opp: return "hexagon"
+        case .keep: return "hand.raised"
+        case .stats: return "square.grid.3x3"
 
         }
     }
