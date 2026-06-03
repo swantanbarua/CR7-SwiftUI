@@ -15,6 +15,13 @@ struct GlassTabBar: View {
     var body: some View {
         Capsule()
             .fill(.ultraThinMaterial)
+            .overlay {
+                Capsule()
+                    .stroke(
+                        .white.opacity(0.3),
+                        lineWidth: 1
+                    )
+            }
             .frame(height: 70)
             .padding(20)
     }
