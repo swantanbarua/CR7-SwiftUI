@@ -11,7 +11,6 @@ struct ContentView: View {
     
     // MARK: - PROPERTIES
     @State private var selectedTab: Tab = .home
-    @Namespace private var animation
     
     // MARK: - BODY
     var body: some View {

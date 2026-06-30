@@ -11,6 +11,7 @@ struct GlassTabBar: View {
     
     // MARK: - PROPERTIES
     @Binding var selectedTab: Tab
+    @Namespace private var animation
     
     // MARK: - BODY
     var body: some View {
@@ -28,6 +29,10 @@ struct GlassTabBar: View {
                         if selectedTab == .home {
                             Capsule()
                                 .fill(.white.opacity(0.2))
+                                .matchedGeometryEffect(
+                                    id: "selection",
+                                    in: animation
+                                )
                         }
                     }
             }
@@ -41,6 +46,17 @@ struct GlassTabBar: View {
                     .foregroundStyle(
                         selectedTab == .goals ? .primary : .secondary
                     )
+                    .padding(12)
+                    .background {
+                        if selectedTab == .goals {
+                            Capsule()
+                                .fill(.white.opacity(0.2))
+                                .matchedGeometryEffect(
+                                    id: "selection",
+                                    in: animation
+                                )
+                        }
+                    }
             }
             Spacer()
             
@@ -52,6 +68,17 @@ struct GlassTabBar: View {
                     .foregroundStyle(
                         selectedTab == .opp ? .primary : .secondary
                     )
+                    .padding(12)
+                    .background {
+                        if selectedTab == .opp {
+                            Capsule()
+                                .fill(.white.opacity(0.2))
+                                .matchedGeometryEffect(
+                                    id: "selection",
+                                    in: animation
+                                )
+                        }
+                    }
             }
             Spacer()
             
@@ -63,6 +90,17 @@ struct GlassTabBar: View {
                     .foregroundStyle(
                         selectedTab == .keep ? .primary : .secondary
                     )
+                    .padding(12)
+                    .background {
+                        if selectedTab == .keep {
+                            Capsule()
+                                .fill(.white.opacity(0.2))
+                                .matchedGeometryEffect(
+                                    id: "selection",
+                                    in: animation
+                                )
+                        }
+                    }
             }
             Spacer()
             
@@ -74,6 +112,15 @@ struct GlassTabBar: View {
                     .foregroundStyle(
                         selectedTab == .stats ? .primary : .secondary
                     )
+                    .padding(12)
+                    .background {
+                        Capsule()
+                            .fill(.white.opacity(0.2))
+                            .matchedGeometryEffect(
+                                id: "selection",
+                                in: animation
+                            )
+                    }
             }
             Spacer()
         }
