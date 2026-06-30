@@ -10,10 +10,17 @@ import SwiftUI
 struct GlassTabBar: View {
     
     // MARK: - PROPERTIES
+    @Binding var selectedTab: Tab
     
     // MARK: - BODY
     var body: some View {
         HStack {
+            Button {
+                selectedTab = .home
+            } label: {
+                Image(systemName: "house")
+                    .font(.system(size: 20))
+            }
             Image(systemName: "house")
                 .font(.system(size: 20))
             Spacer()
@@ -56,5 +63,5 @@ struct GlassTabBar: View {
 }
 
 #Preview {
-    GlassTabBar()
+    GlassTabBar(selectedTab: .constant(.home))
 }
