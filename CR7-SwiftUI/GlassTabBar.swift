@@ -20,6 +20,9 @@ struct GlassTabBar: View {
             } label: {
                 Image(systemName: "house")
                     .font(.system(size: 20))
+                    .foregroundStyle(
+                        selectedTab == .home ? .primary : .secondary
+                    )
             }
             Spacer()
             
@@ -28,6 +31,9 @@ struct GlassTabBar: View {
             } label: {
                 Image(systemName: "list.bullet")
                     .font(.system(size: 20))
+                    .foregroundStyle(
+                        selectedTab == .goals ? .primary : .secondary
+                    )
             }
             Spacer()
             
@@ -36,6 +42,9 @@ struct GlassTabBar: View {
             } label: {
                 Image(systemName: "hexagon")
                     .font(.system(size: 20))
+                    .foregroundStyle(
+                        selectedTab == .opp ? .primary : .secondary
+                    )
             }
             Spacer()
             
@@ -44,6 +53,9 @@ struct GlassTabBar: View {
             } label: {
                 Image(systemName: "hand.raised")
                     .font(.system(size: 20))
+                    .foregroundStyle(
+                        selectedTab == .keep ? .primary : .secondary
+                    )
             }
             Spacer()
             
@@ -52,6 +64,9 @@ struct GlassTabBar: View {
             } label: {
                 Image(systemName: "square.grid.3x3")
                     .font(.system(size: 20))
+                    .foregroundStyle(
+                        selectedTab == .stats ? .primary : .secondary
+                    )
             }
             Spacer()
         }
