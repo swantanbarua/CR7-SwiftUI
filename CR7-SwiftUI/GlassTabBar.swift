@@ -21,26 +21,39 @@ struct GlassTabBar: View {
                 Image(systemName: "house")
                     .font(.system(size: 20))
             }
-            Image(systemName: "house")
-                .font(.system(size: 20))
             Spacer()
             
-            Image(systemName: "list.bullet")
-                .font(.system(size: 20))
+            Button {
+                selectedTab = .goals
+            } label: {
+                Image(systemName: "list.bullet")
+                    .font(.system(size: 20))
+            }
             Spacer()
             
-            Image(systemName: "hexagon")
-                .font(.system(size: 20))
+            Button {
+                selectedTab = .opp
+            } label: {
+                Image(systemName: "hexagon")
+                    .font(.system(size: 20))
+            }
             Spacer()
             
-            Image(systemName: "hand.raised")
-                .font(.system(size: 20))
+            Button {
+                selectedTab = .keep
+            } label: {
+                Image(systemName: "hand.raised")
+                    .font(.system(size: 20))
+            }
             Spacer()
             
-            Image(systemName: "square.grid.3x3")
-                .font(.system(size: 20))
+            Button {
+                selectedTab = .stats
+            } label: {
+                Image(systemName: "square.grid.3x3")
+                    .font(.system(size: 20))
+            }
             Spacer()
-                  
         }
         .padding(20)
         .background(.ultraThinMaterial)
