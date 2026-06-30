@@ -17,7 +17,14 @@ struct GlassTabBar: View {
     var body: some View {
         HStack {
             Button {
-                selectedTab = .home
+                withAnimation(
+                    .spring(
+                        response: 0.35,
+                        dampingFraction: 0.8
+                    )
+                ) {
+                    selectedTab = .home
+                }
             } label: {
                 Image(systemName: "house")
                     .font(.system(size: 20))
@@ -39,7 +46,14 @@ struct GlassTabBar: View {
             Spacer()
             
             Button {
-                selectedTab = .goals
+                withAnimation(
+                    .spring(
+                        response: 0.35,
+                        dampingFraction: 0.8
+                    )
+                ) {
+                    selectedTab = .goals
+                }
             } label: {
                 Image(systemName: "list.bullet")
                     .font(.system(size: 20))
@@ -61,7 +75,14 @@ struct GlassTabBar: View {
             Spacer()
             
             Button {
-                selectedTab = .opp
+                withAnimation(
+                    .spring(
+                        response: 0.35,
+                        dampingFraction: 0.8
+                    )
+                ) {
+                    selectedTab = .opp
+                }
             } label: {
                 Image(systemName: "hexagon")
                     .font(.system(size: 20))
@@ -83,6 +104,14 @@ struct GlassTabBar: View {
             Spacer()
             
             Button {
+                withAnimation(
+                    .spring(
+                        response: 0.35,
+                        dampingFraction: 0.8
+                    )
+                ) {
+                    selectedTab = .keep
+                }
                 selectedTab = .keep
             } label: {
                 Image(systemName: "hand.raised")
@@ -105,7 +134,14 @@ struct GlassTabBar: View {
             Spacer()
             
             Button {
-                selectedTab = .stats
+                withAnimation(
+                    .spring(
+                        response: 0.35,
+                        dampingFraction: 0.8
+                    )
+                ) {
+                    selectedTab = .stats
+                }
             } label: {
                 Image(systemName: "square.grid.3x3")
                     .font(.system(size: 20))
