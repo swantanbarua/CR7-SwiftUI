@@ -23,6 +23,13 @@ struct GlassTabBar: View {
                     .foregroundStyle(
                         selectedTab == .home ? .primary : .secondary
                     )
+                    .padding(12)
+                    .background {
+                        if selectedTab == .home {
+                            Capsule()
+                                .fill(.white.opacity(0.2))
+                        }
+                    }
             }
             Spacer()
             
