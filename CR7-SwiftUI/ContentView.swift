@@ -16,23 +16,29 @@ struct ContentView: View {
     var body: some View {
         
         ZStack(alignment: .bottom) {
-            switch selectedTab {
-                
-            case .home:
-                HomeView()
-                
-            case .goals:
-                GoalsView()
-                
-            case .opp:
-                OppView()
-                
-            case .keep:
-                KeepersView()
-                
-            case .stats:
-                StatsView()
+            Group {
+                switch selectedTab {
+                    
+                case .home:
+                    HomeView()
+                    
+                case .goals:
+                    GoalsView()
+                    
+                case .opp:
+                    OppView()
+                    
+                case .keep:
+                    KeepersView()
+                    
+                case .stats:
+                    StatsView()
+                }
             }
+            .frame(
+                maxWidth: .infinity,
+                maxHeight: .infinity
+            )
             
             GlassTabBar(selectedTab: $selectedTab)
         }
